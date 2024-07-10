@@ -1,25 +1,17 @@
-import logo from './logo.svg'
-import './App.css'
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
-}
+const Workouts = React.lazy(() => import('workouts/App'))
+
+const App = () => (
+  <Router>
+    <React.Suspense fallback='Loading...'>
+      <Routes>
+        <Route path='/workouts/*' element={<Workouts />} />
+        <Route path='/' element={<h1>Main Application</h1>} />
+      </Routes>
+    </React.Suspense>
+  </Router>
+)
 
 export default App
