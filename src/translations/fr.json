@@ -1,4 +1,6 @@
 {
   "welcome": "Bienvenue",
-  "description": "Esta es la aplicación principal."
+  "description": "Ceci est l'application conteneur principale.",
+  "subdescription1": "Vous pouvez tester le sélecteur de langue depuis le tiroir",
+  "subdescription2": "Ou vous pouvez naviguer vers d'autres micro-frontends"
 }

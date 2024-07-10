@@ -1,4 +1,6 @@
 {
   "welcome": "Welcome",
-  "description": "This is the main application."
+  "description": "This is the main container application.",
+  "subdescription1": "You can test the language switcher from the drawer",
+  "subdescription2": "Or you can navigate to other micro frontends"
 }

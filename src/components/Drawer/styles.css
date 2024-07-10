@@ -1,0 +1,64 @@
+.drawer-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.drawer-container h1 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.drawer-container p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.drawer-container .section-links {
+  margin-bottom: 20px;
+}
+
+.drawer-container .section-links .button-link {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.drawer-container .section-links .button-link:hover {
+  background-color: #0056b3;
+}
+
+.drawer-container .button-container {
+  margin-top: 200px;
+}
+
+.drawer-container button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.drawer-container button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.drawer-container button:not(:disabled):hover {
+  background-color: #218838;
+}

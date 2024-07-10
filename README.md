@@ -77,3 +77,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 1. Add env file for production deployment
 1. hot module reload has stopped working
 1. In workouts, micro app development, http://localhost:3001/workouts/ is working fine, but some issue in http://localhost:3001/workouts
+
+### Possible enhancements
+1. Use a mature styling library
