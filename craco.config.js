@@ -1,5 +1,7 @@
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   devServer: {
     port: 3000,
@@ -14,7 +16,9 @@ module.exports = {
           name: 'container',
           filename: 'remoteEntry.js',
           remotes: {
-            workouts: 'workouts@http://localhost:3001/workouts/remoteEntry.js',
+            workouts: isProduction
+              ? 'workouts@https://kahunas-workouts.netlify.app/remoteEntry.js'
+              : 'workouts@http://localhost:3001/workouts/remoteEntry.js',
           },
           exposes: {
             './StoreContext': './src/store/store',
