@@ -1,23 +1,20 @@
 import React, { createContext, useContext } from 'react'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
-// Todo: Remove this temporary root reducer
-const rootReducer = (state = {
-  isLoading: false,
-}, action) => state
+import appSettingsReducer from '../containers/Drawer/store/reducer'
 
-const staticReducers = {
-  rootReducer,
+const appReducers = {
+  appSettings: appSettingsReducer,
 }
 
 const store = configureStore({
-  reducer: combineReducers(staticReducers),
+  reducer: combineReducers(appReducers),
   devTools: process.env.NODE_ENV !== 'production',
 })
 
 export const replaceReducertest = (asyncReducers) => {
   store.replaceReducer(combineReducers({
-    ...staticReducers,
+    ...appReducers,
     ...asyncReducers,
   }))
 }

@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   devServer: {
     port: 3000,
+    hot: true,
     historyApiFallback: true,
   },
   webpack: {
@@ -23,6 +24,8 @@ module.exports = {
             'react-dom': { singleton: true },
             '@reduxjs/toolkit': { singleton: true },
             'react-redux': { singleton: true },
+            'react-i18next': { singleton: true },
+            'i18next': { singleton: true },
           },
         })
       )
