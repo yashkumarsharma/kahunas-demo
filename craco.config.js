@@ -11,10 +11,19 @@ module.exports = {
       webpackConfig.plugins.push(
         new ModuleFederationPlugin({
           name: 'container',
+          filename: 'remoteEntry.js',
           remotes: {
             workouts: 'workouts@http://localhost:3001/workouts/remoteEntry.js',
           },
-          shared: { react: { singleton: true }, 'react-dom': { singleton: true } },
+          exposes: {
+            './StoreContext': './src/store/store',
+          },
+          shared: {
+            react: { singleton: true },
+            'react-dom': { singleton: true },
+            '@reduxjs/toolkit': { singleton: true },
+            'react-redux': { singleton: true },
+          },
         })
       )
       return webpackConfig

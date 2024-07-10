@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Known issues
+
+1. Redux state unable to sync back to container app
+1. http://localhost:3000/workouts/page accessing this page directly is throwing error, but it is working fine in workouts micro repo
+1. Add env file for production deployment
+1. hot module reload has stopped working
+1. In workouts, micro app development, http://localhost:3001/workouts/ is working fine, but some issue in http://localhost:3001/workouts
