@@ -7,14 +7,17 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 import store, { StoreProvider } from './store/store'
+import { AuthProvider } from './auth'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <StoreProvider>
-        <App />
-      </StoreProvider>
+      <AuthProvider>
+        <StoreProvider>
+          <App />
+        </StoreProvider>
+      </AuthProvider>
     </Provider>
   </React.StrictMode>
 )

@@ -22,9 +22,13 @@ module.exports = {
             clients: isProduction
               ? 'clients@https://kahunas-clients.netlify.app/remoteEntry.js'
               : 'clients@http://localhost:3002/clients/remoteEntry.js',
+            auth: isProduction
+              ? 'auth@https://kahunas-auth.netlify.app/remoteEntry.js'
+              : 'auth@http://localhost:3003/auth/remoteEntry.js',
           },
           exposes: {
             './StoreContext': './src/store/store',
+            './AuthContext': './src/auth',
           },
           shared: {
             react: { singleton: true },

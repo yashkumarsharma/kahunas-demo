@@ -24,14 +24,17 @@ const Drawer = (props) => {
       <h1>{title}</h1>
       <p>{t('welcome')}</p>
       <div className='section-links'>
+        <Link to='/' className='button-link'>
+          {t('Dashboard')}
+        </Link>
         <Link to='/workouts' className='button-link'>
-          Workouts
+          {t('Workouts')}
         </Link>
         <Link to='/clients' className='button-link'>
-          Clients
+          {t('Clients')}
         </Link>
         <Link to='/auth' className='button-link'>
-          Auth
+          {t('Auth')}
         </Link>
       </div>
       <div className='button-container'>
