@@ -19,6 +19,9 @@ module.exports = {
             workouts: isProduction
               ? 'workouts@https://kahunas-workouts.netlify.app/remoteEntry.js'
               : 'workouts@http://localhost:3001/workouts/remoteEntry.js',
+            clients: isProduction
+              ? 'clients@https://kahunas-clients.netlify.app/remoteEntry.js'
+              : 'clients@http://localhost:3002/clients/remoteEntry.js',
           },
           exposes: {
             './StoreContext': './src/store/store',

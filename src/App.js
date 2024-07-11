@@ -7,6 +7,7 @@ import './translations/i18n'
 import './App.css'
 
 const Workouts = React.lazy(() => import('workouts/App'))
+const Clients = React.lazy(() => import('clients/App'))
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <React.Suspense fallback='Loading...'>
             <Routes>
               <Route path='/workouts/*' element={<Workouts />} />
+              <Route path='/clients/*' element={<Clients />} />
               <Route path='/' element={<LandingPage />} />
             </Routes>
           </React.Suspense>
