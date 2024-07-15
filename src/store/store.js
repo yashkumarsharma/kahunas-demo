@@ -1,10 +1,17 @@
 import React, { createContext, useContext } from 'react'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
+import { appReducers as workoutsReducers } from 'workouts/Store'
+import { appReducers as clientsReducers } from 'clients/Store'
+import { appReducers as authReducers } from 'auth/Store'
+
 import appSettingsReducer from '../containers/Drawer/store/reducer'
 
 const appReducers = {
   appSettings: appSettingsReducer,
+  ...workoutsReducers,
+  ...clientsReducers,
+  ...authReducers,
 }
 
 const store = configureStore({
